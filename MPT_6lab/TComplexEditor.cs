@@ -41,6 +41,9 @@ namespace MPT_6lab
         }
 
         public string AddDigitReal(int digit) {
+            if(digit < 0 || digit > 9) {
+                return GetString();
+            }
             if(postReal.Length != 0)
             {
                 postReal += digit.ToString();
@@ -62,6 +65,10 @@ namespace MPT_6lab
         }
         public string AddDigitImaginary(int digit)
         {
+            if (digit < 0 || digit > 9)
+            {
+                return GetString();
+            }
             if (postImaginary.Length != 0)
             {
                 postImaginary += digit.ToString();
